@@ -4,8 +4,8 @@
 
 # Meta.
 set :meta, {
-  title: 'Foo',
-  url: 'http://foo.com',
+  title: 'Marián Mazúch',
+  url: 'http://www.marianmazuch.sk',
 }
 
 # Change to your Google Analytics key (e.g. UA-XXXXXXXX-Y).

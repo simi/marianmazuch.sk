@@ -1,4 +1,13 @@
 //= require normalize-css/normalize
+//= require responsive-nav
+@import "media-queries";
+
+$max-width : 750px;
+$hero-height: 257px;
+$menu-bg-color: #a2195b;
+$font-color: #1b1464;
+$menu-items-count: 4;
+$menu-item-height: 50px;
 
 body {
   background: #fcedf5; /* Old browsers */
@@ -17,55 +26,104 @@ body {
 body {
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  color:  #1b1464;
+  color:  $font-color;
 }
 
 #wrapper {
+  @include desktop-and-up {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 552px;
+    background-image: url(image-path('mano-05.png'));
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  @include desktop-and-below {
+    padding-left: 0;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: none;
+  }
+
   padding-bottom: 50px;
-  background-attachment: fixed;
-  background-image: url(image-path('mano-05.png'));
-  background-repeat: no-repeat;
-  background-position: 167px 0;
-  max-width: 700px;
-  padding-left: 552px;
   min-height: 790px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #hero {
   background-image: url(image-path('hrochot.png'));
-  height: 257px;
+  height: $hero-height;
 }
 
-#menu {
-  height: 50px;
-  background-color: #a2195b;
+.nav-collapse {
+  @include tablet-portrait-and-below {
+    top: -$hero-height;
+    height: $menu-item-height * $menu-items-count;
+  }
 
-  a {
-    display: inline-block;
-    margin-left: 30px;
-    margin-top: 10px;
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    text-transform: uppercase;
-    &.active {
-      font-weight: bold;
+  height: $menu-item-height;
+  background-color: $menu-bg-color;
+
+  li {
+    @include tablet-portrait-and-below {
+      display: block;
+      border-bottom: 1px solid $font-color;
     }
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      margin-left: 30px;
+      margin-top: 10px;
+      @include tablet-portrait-and-below {
+        margin-bottom: 11px;
+      }
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+      text-transform: uppercase;
+      &.active {
+        font-weight: bold;
+      }
+  }
   }
 }
 
 #content {
   margin-left: 30px;
+
+  @include desktop-and-below {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
   h1 {
   }
 
+  @include tablet-portrait-and-up {
+    .left {
+      float: left;
+      width: 50%;
+    }
+
+    .right {
+      float: right;
+      width: 50%;
+    }
+  }
+
   div.columns {
-    column-count: 2;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    -ms-column-count: 2;
+    @include tablet-portrait-and-up {
+      column-count: 2;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      -ms-column-count: 2;
+      -o-column-count: 2;
+    }
     text-align: justify;
     p {
       font-size: 16px;

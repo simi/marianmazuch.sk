@@ -30,14 +30,20 @@ html.nojs
     | <![endif]-->
 
   body
-    
     div#wrapper
+      div#toggle
       div#hero
-      div#menu
-        = menu_link("O Mňa", '/')
-        = menu_link("Priority", '/priority')
-        = menu_link("Volebný program", '/program')
-        = menu_link("Poslanci", '/poslanci')
+      div#logo
+      nav.nav-collapse
+        ul
+          li
+            = menu_link("O Mňa", '/')
+          li
+            = menu_link("Priority", '/priority')
+          li
+            = menu_link("Volebný program", '/program')
+          li
+            = menu_link("Poslanci", '/poslanci')
       div#content
         == yield
 

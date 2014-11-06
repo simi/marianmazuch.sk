@@ -36,8 +36,28 @@ body.index #wrapper {
   }
 }
 
+div.members {
+  margin-top: 30px;
+  div.member {
+    margin-top: 20px;
+    .info, .avatar {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .info {
+      font-size: 30px;
+    }
+
+    .avatar {
+      margin-right: 10px;
+    }
+  }
+}
+
+
 #flyer {
-  position: absolute;
+  position: fixed;
   right: 0;
   padding: 10px 10px 9px 9px;
   background-color: $menu-bg-color;

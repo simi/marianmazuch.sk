@@ -42,6 +42,7 @@ body.index #wrapper {
   padding: 10px 10px 9px 9px;
   background-color: $menu-bg-color;
   color: white;
+  font-weight: bold;
 
   @include tablet-portrait-and-below {
     margin-right: 70px;

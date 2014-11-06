@@ -31,6 +31,21 @@ body {
 
 body.index #wrapper {
   background-image: url(image-path('mano-01.png'));
+  @include desktop-and-below {
+    background-image: none;
+  }
+}
+
+#flyer {
+  position: absolute;
+  right: 0;
+  padding: 10px 10px 9px 9px;
+  background-color: $menu-bg-color;
+  color: white;
+
+  @include tablet-portrait-and-below {
+    margin-right: 70px;
+  }
 }
 
 #wrapper {

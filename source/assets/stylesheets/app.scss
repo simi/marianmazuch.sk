@@ -8,7 +8,7 @@ $hero-height: 257px;
 $menu-bg-color: #a2195b;
 $font-color: #1b1464;
 $menu-items-count: 4;
-$menu-item-height: 50px;
+$menu-item-height: 55px;
 
 body {
   background: #fcedf5; /* Old browsers */
@@ -69,6 +69,7 @@ div.members {
 
   @include tablet-portrait-and-below {
     margin-right: 70px;
+    padding: 5px 10px 6px 9px;
   }
 }
 

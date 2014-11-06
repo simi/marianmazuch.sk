@@ -29,6 +29,10 @@ body {
   color:  $font-color;
 }
 
+body.index #wrapper {
+  background-image: url(image-path('mano-01.png'));
+}
+
 #wrapper {
   @include desktop-and-up {
     max-width: $max-width;

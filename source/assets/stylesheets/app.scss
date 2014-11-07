@@ -119,6 +119,7 @@ div.members {
   @include tablet-portrait-and-below {
     top: -$hero-height;
     height: $menu-item-height * $menu-items-count;
+    padding-left: 0;
   }
   padding-left: 15px;
 

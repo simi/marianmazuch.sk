@@ -147,6 +147,7 @@ div.members {
       padding: 10px 24px;
       @include tablet-portrait-and-below {
         margin-bottom: 11px;
+        padding: 10px 24px 0 24px;
       }
       color: white;
       font-size: 24px;

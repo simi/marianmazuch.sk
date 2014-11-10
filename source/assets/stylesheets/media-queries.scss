@@ -10,11 +10,11 @@
 // that might not fit the dimensions exactly. This means the break
 // points are seamless.
 
-$mq-mobile-portrait		: 320px !default;
-$mq-mobile-landscape	: 480px !default;
-$mq-tablet-portrait		: 705px !default;
-$mq-tablet-landscape	: 1024px !default;
-$mq-desktop				: 1302px !default;
+$mq-mobile-portrait  : 320px  !default;
+$mq-mobile-landscape : 480px  !default;
+$mq-tablet-portrait  : 705px  !default;
+$mq-tablet-landscape : 1024px !default;
+$mq-desktop          : 1302px !default;
 
 // Both portrait and landscape
 @mixin mobile-only {

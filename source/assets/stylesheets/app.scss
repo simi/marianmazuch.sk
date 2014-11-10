@@ -113,6 +113,15 @@ div.members {
 #hero {
   background-image: url(image-path('hrochot.png'));
   height: $hero-height;
+  @include desktop-and-below {
+    background-image: url(image-path('mano-05-min.png'));
+  }
+}
+
+body.index #hero {
+  @include desktop-and-below {
+    background-image: url(image-path('mano-01-min.png'));
+  }
 }
 
 .nav-collapse {
